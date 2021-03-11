@@ -11,21 +11,22 @@ from Test.Business.login_business import LoginBusiness
 
 
 class BaseCase(unittest.TestCase):
-
     # 定义初始化方法
-    def setUp(self) -> None:
+    @classmethod
+    def setUpClass(cls) -> None:
         # 获取浏览器驱动对象
-        self.driver = webdriver.Chrome()
+        cls.driver = webdriver.Chrome()
         # 打开url
         url = 'https://gssdev.haoshengy.com/pc_workbench/login'
-        self.driver.get(url)
+        cls.driver.get(url)
         # 最大化浏览器
-        self.driver.maximize_window()
+        cls.driver.maximize_window()
         # 隐式等待
-        self.driver.implicitly_wait(10)
-        self.login = LoginBusiness(self.driver)
+        cls.driver.implicitly_wait(10)
+        cls.login = LoginBusiness(self.driver)
 
     # 定义teardown
-    def tearDown(self) -> None:
+    @classmethod
+    def tearDownClass(cls) -> None:
         # 关闭浏览器
-        self.driver.quit()
+        cls.driver.quit()

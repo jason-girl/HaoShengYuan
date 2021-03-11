@@ -7,4 +7,4 @@
 
 login_username = ['el-input__inner', 1]
 login_password = ['el-input__inner', 2]
-login_btn = ['el-input__inner', 1]
+login_btn = ['login__button', 0]

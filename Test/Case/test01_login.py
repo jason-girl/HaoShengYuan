@@ -13,16 +13,16 @@ from Test.Case.base_case import BaseCase
 class TestLogin(BaseCase):
 
     def test_1(self):
-        url = self.login.go_system('xxxxxxxxxxx', 'xxxxxxxx')
+        url = self.login.go_system('95555555555', '12345678')
         text = "https://gssdev.haoshengy.com/pc_workbench/workbench/overview"
         self.assertEqual(url, text, '当前页面URL不正确--测试不通过')
 
     def test_2(self):
-        url = self.login.go_system('xxxxxxxxxxx', 'xxxxxxxx')
+        url = self.login.go_system('12456357854', '12345678')
         text = "https://gssdev.haoshengy.com/pc_workbench/workbench/overview"
         self.assertEqual(url, text, '当前页面URL不正确--测试不通过')
 
     def test_3(self):
-        url = self.login.go_system('xxxxxxxxxxx', 'xxxxxxxx')
+        url = self.login.go_system('95555555555', '111111111')
         text = "https://gssdev.haoshengy.com/pc_workbench/workbench/overview"
         self.assertEqual(url, text, '当前页面URL不正确--测试不通过')
