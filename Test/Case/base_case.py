@@ -23,7 +23,7 @@ class BaseCase(unittest.TestCase):
         cls.driver.maximize_window()
         # 隐式等待
         cls.driver.implicitly_wait(10)
-        cls.login = LoginBusiness(self.driver)
+        cls.login = LoginBusiness(cls.driver)
 
     # 定义teardown
     @classmethod
