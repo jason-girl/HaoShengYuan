@@ -6,8 +6,10 @@
 
 
 import unittest
+
 from selenium import webdriver
 from Test.Business.login_business import LoginBusiness
+from public.read_ini import get_value
 
 
 class BaseCase(unittest.TestCase):
@@ -17,7 +19,7 @@ class BaseCase(unittest.TestCase):
         # 获取浏览器驱动对象
         cls.driver = webdriver.Chrome()
         # 打开url
-        url = 'https://gssdev.haoshengy.com/pc_workbench/login'
+        url = get_value(get_value('Base', 'Env'), 'website_url')
         cls.driver.get(url)
         # 最大化浏览器
         cls.driver.maximize_window()

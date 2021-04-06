@@ -6,7 +6,7 @@
 
 
 from selenium.webdriver.common.by import By
-from config.base import Base
+from public.base import Base
 
 
 login_username = (By.CLASS_NAME, 'el-input__inner', 1)

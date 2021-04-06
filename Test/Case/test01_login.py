@@ -8,11 +8,14 @@
 # 导包
 
 from Test.Case.base_case import BaseCase
+from public.get_log import LogInfo
 
 
-class TestLogin(BaseCase):
+class TestLogin(BaseCase, LogInfo):
 
+    @LogInfo.get_error
     def test_1(self):
+        self.log.info('TestCase1 Start Running')
         url = self.login.go_system('xxxxxxxxxxx', '12345678')
-        text = "https://gssdev.haoshengy.com/pc_workbench/workbench/overview"
+        text = "xxx"
         self.assertEqual(url, text, '当前页面URL不正确--测试不通过')
